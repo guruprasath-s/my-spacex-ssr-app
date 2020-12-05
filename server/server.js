@@ -9,8 +9,14 @@ import App from "../src/App";
 
 const PORT = process.env.PORT || 8080;
 const app = express();
+//const buildPath = path.join(__dirname, "..", "build");
 
-app.get("/", (req, res) => {
+const __ROOT_DIR__ = process.cwd();
+const staticDirPath = path.resolve(__ROOT_DIR__, "build", "static");
+
+app.use("/static", express.static(staticDirPath));
+
+app.get("*", (req, res) => {
   const app = ReactDOMServer.renderToString(<App />);
 
   const indexFile = path.resolve("./build/index.html");
@@ -26,7 +32,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.use(express.static("./build"));
+//app.use("/", express.static("./build"));
 
 app.listen(PORT, () => {
   console.log(`Server is listening on port ${PORT}`);

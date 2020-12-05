@@ -32,7 +32,7 @@
     "webpack-node-externals": "1.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server-build/server.bundle.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

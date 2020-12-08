@@ -40,9 +40,6 @@ function Filter({ handleFilterChange }) {
           <Typography align="center" component="p">
             <b> Launch Year</b>
           </Typography>
-          <Typography align="center" component="p">
-            ----------
-          </Typography>
           <Grid container spacing={1}>
             {rangeOfYears(2006, 2020).map((item, i) => {
               return (
@@ -75,9 +72,6 @@ function Filter({ handleFilterChange }) {
         <Grid item xs={12}>
           <Typography align="center" component="p">
             <b>Successful Launch</b>
-          </Typography>
-          <Typography align="center" component="p">
-            ----------
           </Typography>
           <Grid container spacing={1}>
             {["True", "False"].map((item, i) => {
@@ -112,9 +106,6 @@ function Filter({ handleFilterChange }) {
         <Grid item xs={12}>
           <Typography align="center" component="p">
             <b>Successful Landing</b>
-          </Typography>
-          <Typography align="center" component="p">
-            ----------
           </Typography>
           <Grid container spacing={1}>
             {["True", "False"].map((item, i) => {
